@@ -15,7 +15,8 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Square campo;
-    private Circle sun;    
+    private Circle sun; 
+    private Person xpeque;
    
     /**
      * Constructor for objects of class Picture
@@ -67,6 +68,8 @@ public class Picture
         
         
         
+        
+        
        
       
   }
@@ -112,6 +115,24 @@ public class Picture
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+        }
+    }
+    
+    /**
+     * Change this picture to use color display
+     */
+    public void setxpeque()
+    {
+        if (wall != null)   // only if it's painted already...
+        {   
+            
+        xpeque = new Person();
+        xpeque.changeColor("black");
+        xpeque.moveHorizontal(-300);
+        xpeque.moveVertical(30);        
+        xpeque.makeVisible();
+        xpeque.slowMoveHorizontal(160);
+        
         }
     }
 }
