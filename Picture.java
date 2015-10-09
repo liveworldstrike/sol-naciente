@@ -64,12 +64,11 @@ public class Picture
         sun.moveVertical(-40);
         sun.changeSize(80);
         sun.makeVisible();
-        sun.slowMoveVertical(130);
+        
         
        
       
-    }
-
+  }
     /**
      * Change this picture to black/white display
      */
@@ -81,6 +80,17 @@ public class Picture
             window.changeColor("white");
             roof.changeColor("black");
             sun.changeColor("black");
+        }
+    }
+    
+    /**
+     * Change this picture down sun display
+     */
+    public void moveSun ()
+    {
+        if (wall != null)   // only if it's painted already...
+        {
+            sun.slowMoveVertical(130);
         }
     }
 
