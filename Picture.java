@@ -66,6 +66,7 @@ public class Picture
         sun.makeVisible();
         
         
+        
        
       
   }
@@ -91,6 +92,12 @@ public class Picture
         if (wall != null)   // only if it's painted already...
         {
             sun.slowMoveVertical(130);
+            wall.changeColor("black");
+            window.changeColor("white");
+            roof.changeColor("black");
+            sun.changeColor("black");
+            campo.changeColor("black");
+            
         }
     }
 
