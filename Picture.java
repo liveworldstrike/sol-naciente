@@ -17,6 +17,9 @@ public class Picture
     private Square campo;
     private Circle sun; 
     private Person xpeque;
+    private Circle O;
+    private Circle S;
+    private Circle F;
    
     /**
      * Constructor for objects of class Picture
@@ -66,6 +69,20 @@ public class Picture
         sun.changeSize(80);
         sun.makeVisible();
         
+        O = new Circle();        
+        O.moveHorizontal(-230);
+        O.moveVertical(-40);
+        O.changeSize(30);
+        
+        S = new Circle();        
+        S.moveHorizontal(-190);
+        S.moveVertical(-20);
+        S.changeSize(30);
+        
+        F = new Circle();
+        F.moveHorizontal(-150);
+        F.moveVertical(0);
+        F.changeSize(30);
         
         
         
@@ -119,7 +136,7 @@ public class Picture
     }
     
     /**
-     * Change this picture to use color display
+     * Change this picture to nuevo xpeke 
      */
     public void setxpeque()
     {
@@ -135,4 +152,57 @@ public class Picture
         
         }
     }
-}
+    
+    
+    /**
+     * Change this picture to estrellas aparecen
+     */
+    public void ESTRELLAS ()
+    {
+        if (wall != null)   // only if it's painted already...
+        {   
+            
+       
+        O.makeVisible();
+        O.changeColor("black");
+        
+        
+        S.makeVisible();
+        S.changeColor("black");
+        
+        
+        F.makeVisible();
+        F.changeColor("black");
+        }
+ }
+ 
+  /**
+     * Change this picture to estrellas aparecen
+     */
+    public void ESTRELLAScambioDEPOSICION ()
+    {
+        if (wall != null)   // only if it's painted already...
+        { 
+           
+   
+        
+         
+        O.moveHorizontal(230);
+        O.moveVertical(-40);
+        O.changeSize(30);
+        
+        
+        
+        S.moveHorizontal(190);
+        S.moveVertical(-20);
+        S.changeSize(30);
+        
+        
+        
+        F.moveHorizontal(150);
+        F.moveVertical(0);
+        F.changeSize(30);
+      
+        }
+ }
+ }
